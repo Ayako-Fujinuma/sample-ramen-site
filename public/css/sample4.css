@@ -1,0 +1,346 @@
+/* Sample4: ポップ・カジュアル */
+:root {
+  --bg: #fff4d6;
+  --ink: #2b2018;
+  --primary: #ff6b4a;
+  --teal: #2fb6a5;
+  --yellow: #ffd447;
+  --card: #ffffff;
+  --header-h: 76px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Zen Maru Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.8;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.s4-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- ヘッダー ---------- */
+.s4-header {
+  position: fixed;
+  top: var(--samples-bar-h);
+  left: 0;
+  right: 0;
+  height: var(--header-h);
+  background: var(--bg);
+  border-bottom: 3px solid var(--ink);
+  z-index: 150;
+}
+
+.s4-header .s4-wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.s4-logo {
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+.s4-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.s4-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+.s4-nav a:hover {
+  background: var(--yellow);
+}
+
+/* ---------- ヒーロー ---------- */
+.s4-hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(var(--samples-bar-h) + var(--header-h));
+  padding-bottom: 60px;
+}
+
+.s4-blob {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.s4-blob-1 {
+  width: 320px;
+  height: 320px;
+  background: var(--yellow);
+  top: 20%;
+  right: -80px;
+  opacity: 0.7;
+}
+
+.s4-blob-2 {
+  width: 200px;
+  height: 200px;
+  background: var(--teal);
+  bottom: 0;
+  left: -60px;
+  opacity: 0.35;
+}
+
+.s4-hero-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.s4-eyebrow {
+  display: inline-block;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 999px;
+  margin: 0 0 20px;
+}
+
+.s4-hero-inner h1 {
+  font-size: clamp(2.2rem, 8vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.3;
+  margin: 0 0 18px;
+}
+
+.s4-hero-inner h1 span {
+  color: var(--primary);
+}
+
+.s4-lead {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 30px;
+}
+
+.s4-btn {
+  display: inline-block;
+  padding: 15px 36px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1rem;
+  border-radius: 999px;
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.s4-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+/* ---------- セクション共通 ---------- */
+.s4-section {
+  padding: 64px 0;
+}
+
+.s4-section-alt {
+  background: #ffeab8;
+}
+
+.s4-heading {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 0 0 36px;
+}
+
+/* ---------- メニュー ---------- */
+.s4-menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 620px) {
+  .s4-menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
+  .s4-menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.s4-menu-card {
+  position: relative;
+  background: var(--card);
+  border: 3px solid var(--ink);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.s4-menu-card img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 3px solid var(--ink);
+}
+
+.s4-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--yellow);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-weight: 900;
+  font-size: 0.85rem;
+}
+
+.s4-c1 .s4-tag { background: var(--yellow); }
+.s4-c2 .s4-tag { background: #ffb1a0; }
+.s4-c3 .s4-tag { background: #a8e6da; }
+
+.s4-menu-body {
+  padding: 16px 18px 20px;
+}
+
+.s4-menu-body h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.s4-menu-body p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #5c4c40;
+}
+
+/* ---------- アクセス / 営業時間 ---------- */
+.s4-two-col {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 860px) {
+  .s4-two-col {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.s4-panel {
+  background: var(--card);
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  padding: 24px 26px;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.s4-def {
+  margin: 0;
+}
+
+.s4-def dt {
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 16px;
+}
+
+.s4-def dt:first-child {
+  margin-top: 0;
+}
+
+.s4-def dd {
+  margin: 4px 0 0;
+}
+
+.s4-def-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 20px;
+}
+
+.s4-def-row dt {
+  margin-top: 0;
+}
+
+.s4-map {
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.s4-map iframe {
+  width: 100%;
+  height: 280px;
+  border: 0;
+  display: block;
+}
+
+.s4-hours-panel {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.s4-notice {
+  max-width: 480px;
+  margin: 24px auto 0;
+  padding: 14px 18px;
+  background: var(--yellow);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: help;
+}
+
+.s4-lead-sub {
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.s4-section#contact {
+  text-align: center;
+}
+
+/* ---------- フッター ---------- */
+.s4-footer {
+  border-top: 3px solid var(--ink);
+  padding: 28px 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.s4-footer p {
+  margin: 0 0 6px;
+}

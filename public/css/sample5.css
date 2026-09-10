@@ -1,0 +1,313 @@
+/* Sample5: 雑誌風フォトファースト */
+:root {
+  --bg: #f5f3ef;
+  --ink: #141414;
+  --text-sub: #6b6660;
+  --accent: #c1442e;
+  --line: #ddd8cf;
+  --header-h: 68px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.8;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.s5-wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- ヘッダー ---------- */
+.s5-header {
+  position: fixed;
+  top: var(--samples-bar-h);
+  left: 0;
+  right: 0;
+  height: var(--header-h);
+  background: rgba(245, 243, 239, 0.92);
+  backdrop-filter: blur(4px);
+  border-bottom: 2px solid var(--ink);
+  z-index: 150;
+}
+
+.s5-header .s5-wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.s5-logo {
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  font-size: 1rem;
+}
+
+.s5-nav {
+  display: flex;
+  gap: 22px;
+}
+
+.s5-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.s5-nav a:hover {
+  color: var(--accent);
+}
+
+/* ---------- ヒーロー(雑誌の表紙風) ---------- */
+.s5-hero {
+  position: relative;
+  min-height: clamp(480px, 82vh, 700px);
+  display: flex;
+  align-items: flex-end;
+  padding-top: calc(var(--samples-bar-h) + var(--header-h));
+  overflow: hidden;
+}
+
+.s5-hero-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.s5-hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(20, 20, 20, 0.75) 0%, rgba(20, 20, 20, 0.1) 55%);
+}
+
+.s5-hero-text {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 56px;
+  color: #fff;
+}
+
+.s5-issue {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  background: #fff;
+  display: inline-block;
+  padding: 4px 12px;
+  margin: 0 0 20px;
+  font-weight: 700;
+}
+
+.s5-hero-text h1 {
+  font-size: clamp(3rem, 12vw, 6.5rem);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+}
+
+.s5-hero-text .s5-lead {
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
+  font-weight: 500;
+  max-width: 26em;
+}
+
+/* ---------- セクション共通 ---------- */
+.s5-section {
+  padding: 76px 0;
+}
+
+.s5-section-alt {
+  background: #ece7dc;
+}
+
+.s5-kicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin: 0 0 8px;
+}
+
+.s5-heading {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 900;
+  margin: 0 0 40px;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- メニュー：非対称グリッド ---------- */
+.s5-menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 760px) {
+  .s5-menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+  }
+
+  .s5-tile-big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+.s5-tile {
+  position: relative;
+  min-height: 220px;
+  border-radius: 2px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.s5-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(20, 20, 20, 0.75) 0%, rgba(20, 20, 20, 0) 60%);
+}
+
+.s5-tile-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 18px;
+  color: #fff;
+}
+
+.s5-tile-caption h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.s5-tile-caption p {
+  margin: 0 0 6px;
+  font-size: 0.82rem;
+  opacity: 0.9;
+  max-width: 28em;
+}
+
+.s5-price {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: var(--accent);
+  padding: 3px 10px;
+}
+
+/* ---------- アクセス ---------- */
+.s5-two-col {
+  display: grid;
+  gap: 32px;
+}
+
+@media (min-width: 860px) {
+  .s5-two-col {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.s5-def {
+  margin: 0;
+}
+
+.s5-def dt {
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-top: 18px;
+}
+
+.s5-def dt:first-child {
+  margin-top: 0;
+}
+
+.s5-def dd {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+}
+
+.s5-def-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 24px;
+}
+
+.s5-def-row dt {
+  margin-top: 0;
+}
+
+.s5-map iframe {
+  width: 100%;
+  height: 280px;
+  border: 0;
+}
+
+.s5-notice {
+  margin: 28px 0 0;
+  padding: 14px 18px;
+  border-left: 3px solid var(--accent);
+  background: #fff;
+  font-size: 0.85rem;
+  color: var(--text-sub);
+  cursor: help;
+}
+
+.s5-lead-sub {
+  color: var(--text-sub);
+  margin: 0 0 24px;
+  max-width: 32em;
+}
+
+.s5-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.s5-btn:hover {
+  background: var(--accent);
+}
+
+/* ---------- フッター ---------- */
+.s5-footer {
+  border-top: 2px solid var(--ink);
+  padding: 28px 0;
+  font-size: 0.78rem;
+  color: var(--text-sub);
+}
+
+.s5-footer p {
+  margin: 0 0 6px;
+}

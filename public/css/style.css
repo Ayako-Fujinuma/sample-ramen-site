@@ -13,10 +13,9 @@
   --accent-dark: #a85f2a;
   --accent-soft: #f1d9a8;
   --line: #e7dcc8;
-  --sample-bar-h: 34px;
   --header-h: 64px;
   --nav-h: 57px;
-  --top-offset: calc(var(--sample-bar-h) + var(--header-h));
+  --top-offset: calc(var(--samples-bar-h) + var(--header-h));
 }
 
 * {
@@ -56,32 +55,10 @@ section {
   scroll-margin-top: calc(var(--top-offset) + var(--nav-h));
 }
 
-/* ---------- サンプルサイト表示バー ---------- */
-.sample-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--sample-bar-h);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #2a2118;
-  color: #f4ece0;
-  font-size: 0.72rem;
-  letter-spacing: 0.02em;
-  padding: 0 12px;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  z-index: 200;
-}
-
 /* ---------- ヘッダー ---------- */
 .site-header {
   position: fixed;
-  top: var(--sample-bar-h);
+  top: var(--samples-bar-h);
   left: 0;
   right: 0;
   height: var(--header-h);
