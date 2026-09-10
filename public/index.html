@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>麺処 ひなた | 個人経営ラーメン店(サンプルサイト)</title>
+<meta name="description" content="麺処 ひなた — 心もお腹もあたたまる一杯を。醤油・塩・味噌など、素材にこだわったラーメンをご提供する個人経営のラーメン店です。※本サイトは架空店舗のサンプル(ポートフォリオ)です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ※このサイトは架空店舗の営業用サンプル(ポートフォリオ)です -->
+
+<header class="site-header">
+  <div class="container">
+    <a href="#hero" class="brand">麺処 ひなた</a>
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="main-nav" id="mainNav">
+  <ul>
+    <li><a href="#menu">メニュー</a></li>
+    <li><a href="#access">アクセス</a></li>
+    <li><a href="#hours">営業時間</a></li>
+    <li><a href="#sns">SNS</a></li>
+  </ul>
+</nav>
+
+<!-- 臨時休業のお知らせ：public/js/notices.json を編集するとここに表示されます -->
+<div class="notice-banner" id="noticeBanner" hidden>
+  <div class="container">
+    <ul id="noticeList"></ul>
+  </div>
+</div>
+
+<main>
+
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <span class="hero-eyebrow">個人経営・一杯入魂</span>
+      <h1>心もお腹も、<br>あたたまる一杯を。</h1>
+      <p>厳選した素材でとった出汁と、丁寧に打った自家製麺。麺処 ひなたは、あたたかい時間をお届けするラーメン店です。</p>
+      <a class="btn" href="#menu">メニューを見る</a>
+    </div>
+  </section>
+
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="section-head">
+        <span class="en">MENU</span>
+        <h2>看板メニュー</h2>
+      </div>
+      <p class="section-lead">毎朝仕込むスープと自家製麺が自慢です。全メニュー、替え玉・トッピングもご用意しております。</p>
+
+      <div class="menu-grid">
+
+        <article class="menu-card">
+          <img src="images/menu-shoyu.svg" alt="特製醤油ラーメン" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-title">
+              <h3>特製醤油ラーメン</h3>
+              <span class="menu-price">¥950</span>
+            </div>
+            <p>鶏と煮干しの澄んだ醤油スープに、自家製の細麺がよく絡みます。</p>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <img src="images/menu-shio.svg" alt="塩ラーメン" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-title">
+              <h3>塩ラーメン</h3>
+              <span class="menu-price">¥900</span>
+            </div>
+            <p>昆布と貝出汁の効いた、やさしい塩味のあっさりスープ。</p>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <img src="images/menu-miso-butter-corn.svg" alt="味噌バターコーン" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-title">
+              <h3>味噌バターコーン</h3>
+              <span class="menu-price">¥1,050</span>
+            </div>
+            <p>コクのある合わせ味噌に、バターと甘いコーンをのせて。</p>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <img src="images/menu-tsukemen.svg" alt="特製つけ麺" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-title">
+              <h3>特製つけ麺</h3>
+              <span class="menu-price">¥1,100</span>
+            </div>
+            <p>魚介と豚骨をじっくり煮込んだ、濃厚な深みのあるつけ汁。</p>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <img src="images/menu-veggie.svg" alt="野菜たっぷり塩そば" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-title">
+              <h3>野菜たっぷり塩そば</h3>
+              <span class="menu-price">¥980</span>
+            </div>
+            <p>彩り野菜をたっぷりのせた、あっさり食べられる一杯です。</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="access">
+    <div class="container">
+      <div class="section-head">
+        <span class="en">ACCESS</span>
+        <h2>アクセス</h2>
+      </div>
+
+      <div class="access-grid">
+        <dl class="access-info">
+          <dt>店名</dt>
+          <dd>麺処 ひなた(サンプル)</dd>
+
+          <dt>住所</dt>
+          <dd>〒111-0032<br>東京都台東区浅草2-3-1(サンプル住所)</dd>
+
+          <dt>最寄駅</dt>
+          <dd>東京メトロ 浅草駅より徒歩5分</dd>
+
+          <dt>電話番号</dt>
+          <dd>03-0000-0000(サンプル)</dd>
+        </dl>
+
+        <!-- Googleマップ：ダミー座標を埋め込んでいます。実店舗の住所に合わせて座標・q= の値を差し替えてください -->
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=35.7148,139.7967&z=16&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="店舗地図(サンプル座標)">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="hours">
+    <div class="container">
+      <div class="section-head">
+        <span class="en">HOURS</span>
+        <h2>営業時間・定休日</h2>
+      </div>
+
+      <table class="hours-table">
+        <tr>
+          <th>ランチ</th>
+          <td>11:00 〜 14:30(L.O. 14:00)</td>
+        </tr>
+        <tr>
+          <th>ディナー</th>
+          <td>17:30 〜 21:00(L.O. 20:30)</td>
+        </tr>
+        <tr>
+          <th>定休日</th>
+          <td class="closed-day">毎週水曜日・第3木曜日</td>
+        </tr>
+      </table>
+
+      <!-- 臨時休業のお知らせ一覧（notices.jsonから自動生成） -->
+      <div id="hoursNotice" hidden style="max-width:480px;margin:24px auto 0;">
+        <p style="font-weight:700;color:var(--accent-dark);text-align:center;margin-bottom:8px;">臨時休業のお知らせ</p>
+        <ul id="hoursNoticeList" style="list-style:none;padding:0;margin:0;text-align:center;color:var(--text-sub);font-size:0.9rem;"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="sns">
+    <div class="container">
+      <div class="section-head">
+        <span class="en">SNS</span>
+        <h2>SNSでも発信しています</h2>
+      </div>
+
+      <ul class="sns-list">
+        <li>
+          <!-- ダミーURL：実際のInstagramアカウントに差し替えてください -->
+          <a href="https://instagram.com/example" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg class="icon-sns" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 2.02.25 2.73.53a5.5 5.5 0 0 1 2 1.3 5.5 5.5 0 0 1 1.3 2c.28.71.48 1.56.53 2.73.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 2.02-.53 2.73a5.5 5.5 0 0 1-1.3 2 5.5 5.5 0 0 1-2 1.3c-.71.28-1.56.48-2.73.53-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-2.02-.25-2.73-.53a5.5 5.5 0 0 1-2-1.3 5.5 5.5 0 0 1-1.3-2c-.28-.71-.48-1.56-.53-2.73C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-2.02.53-2.73a5.5 5.5 0 0 1 1.3-2 5.5 5.5 0 0 1 2-1.3c.71-.28 1.56-.48 2.73-.53C8.4 2.2 8.8 2.2 12 2.2zm0 3.03A6.77 6.77 0 1 0 12 18.8 6.77 6.77 0 0 0 12 5.23zm0 2.16a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2zm6.4-2.4a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <!-- ダミーURL：実際のXアカウントに差し替えてください -->
+          <a href="https://x.com/example" target="_blank" rel="noopener noreferrer" aria-label="X（旧Twitter）">
+            <svg class="icon-sns" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.9 2H22l-7.4 8.46L23 22h-6.9l-5.4-6.6L4.5 22H1.4l7.9-9.04L1 2h7.1l4.9 6.02L18.9 2zm-1.2 18h1.9L7.4 4h-2l12.3 16z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span class="brand">麺処 ひなた</span>
+    <address>〒111-0032 東京都台東区浅草2-3-1(サンプル住所)｜03-0000-0000</address>
+    <p class="copyright">&copy; 2026 麺処 ひなた. This is a fictional sample site for portfolio use.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

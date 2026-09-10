@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6ddb2"/>
+      <stop offset="55%" stop-color="#e8a65f"/>
+      <stop offset="100%" stop-color="#c97a3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#heroGrad)"/>
+  <g opacity="0.18" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round">
+    <path d="M300 250 C 340 180, 260 140, 300 60"/>
+    <path d="M420 260 C 460 190, 380 150, 420 70"/>
+    <path d="M1200 220 C 1240 150, 1160 110, 1200 30"/>
+    <path d="M1320 230 C 1360 160, 1280 120, 1320 40"/>
+  </g>
+  <g transform="translate(800,560)" opacity="0.9">
+    <ellipse cx="0" cy="40" rx="260" ry="60" fill="#3a2e26" opacity="0.15"/>
+    <path d="M-240 0 a240 90 0 1 0 480 0 z" fill="#fbf3e4"/>
+    <path d="M-240 0 a240 90 0 1 0 480 0 l-20 120 a220 60 0 0 1 -440 0 z" fill="#f1d9a8"/>
+    <path d="M-180 -10 q40 30 80 0 q40 30 80 0 q40 30 80 0" stroke="#c97a3d" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.5"/>
+  </g>
+</svg>
