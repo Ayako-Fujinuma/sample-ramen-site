@@ -1,4 +1,4 @@
-# 麺処 ひなた（サンプルサイト）
+# 麺処 ぬくもり庵（サンプルサイト）
 
 個人経営のラーメン屋さんを想定した、**営業用サンプル(ポートフォリオ)サイト**です。
 実在の店舗ではなく架空の店舗として作成しています。プレーンな HTML / CSS / JS のみで構成し、Cloudflare Workers(Static Assets)にそのままデプロイできます。
@@ -13,7 +13,7 @@
 │   ├── index.html
 │   ├── css/style.css
 │   ├── js/main.js
-│   ├── js/config.js     # 臨時休業のお知らせの読み込み元設定(Googleスプレッドシート連携)
+│   ├── js/config.js     # 臨時休業のお知らせ・お問い合わせフォームの連携設定
 │   ├── js/notices.json  # 臨時休業のお知らせ(デフォルトのお知らせデータ)
 │   └── images/          # プレースホルダー画像（差し替え方は images/README.md 参照）
 ├── wrangler.jsonc        # Workers Static Assets の設定
@@ -52,6 +52,21 @@ window.NOTICE_CONFIG = {
 ```
 
 配列を空 `[]` にすれば、お知らせ表示は自動的に非表示になります。
+
+## お問い合わせフォーム
+
+[Web3Forms](https://web3forms.com/)(登録無料・バックエンド不要)と連携しています。
+
+1. web3forms.com で登録し、Access Key を発行する
+2. `public/js/config.js` の `CONTACT_ACCESS_KEY` に貼り付ける
+
+```js
+window.CONTACT_CONFIG = {
+  CONTACT_ACCESS_KEY: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+};
+```
+
+未設定のままだと、送信時に「サンプルサイトのため送信は無効になっています」という案内を表示します(誤送信防止のためのデモ用ガードです)。
 
 ## ローカルで確認する
 

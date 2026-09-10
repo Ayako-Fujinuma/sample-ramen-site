@@ -1,21 +1,5 @@
 (() => {
-  // ハンバーガーナビの開閉
-  const navToggle = document.getElementById("navToggle");
-  const mainNav = document.getElementById("mainNav");
-
-  if (navToggle && mainNav) {
-    navToggle.addEventListener("click", () => {
-      const isOpen = mainNav.classList.toggle("is-open");
-      navToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    mainNav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        mainNav.classList.remove("is-open");
-        navToggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
+  const NOTICE_TOOLTIP = "サンプル：実際の運用ではGoogleスプレッドシートを編集するだけで更新できます";
 
   // Googleスプレッドシートを「ウェブに公開」した際のCSVをパースする(ダブルクォート内のカンマ・改行に対応)
   function parseCsvRows(text) {
@@ -105,10 +89,12 @@
 
         const bannerItem = document.createElement("li");
         bannerItem.innerHTML = `<span class="notice-date">${notice.date ?? ""}</span>${notice.message}`;
+        bannerItem.title = NOTICE_TOOLTIP;
         bannerList.appendChild(bannerItem);
 
         const hoursItem = document.createElement("li");
         hoursItem.textContent = notice.date ? `${notice.date}：${notice.message}` : notice.message;
+        hoursItem.title = NOTICE_TOOLTIP;
         hoursNoticeList.appendChild(hoursItem);
       });
 
@@ -118,4 +104,57 @@
     .catch(() => {
       // お知らせの取得に失敗しても通常表示は継続する
     });
+
+  // お問い合わせフォーム(Web3Forms連携。設定方法は js/config.js を参照)
+  const contactForm = document.getElementById("contactForm");
+  const formStatus = document.getElementById("formStatus");
+
+  if (contactForm && formStatus) {
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const accessKey = (window.CONTACT_CONFIG && window.CONTACT_CONFIG.CONTACT_ACCESS_KEY) || "";
+
+      const showStatus = (text, type) => {
+        formStatus.textContent = text;
+        formStatus.className = `form-status is-${type}`;
+        formStatus.hidden = false;
+      };
+
+      if (!accessKey) {
+        showStatus(
+          "サンプルサイトのため送信は無効になっています。実際に使う場合は js/config.js に Web3Forms の Access Key を設定してください。",
+          "error"
+        );
+        return;
+      }
+
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      if (submitButton) submitButton.disabled = true;
+
+      const formData = new FormData(contactForm);
+      formData.append("access_key", accessKey);
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.success) {
+            showStatus("送信しました。ありがとうございます。", "success");
+            contactForm.reset();
+          } else {
+            showStatus("送信に失敗しました。時間をおいて再度お試しください。", "error");
+          }
+        })
+        .catch(() => {
+          showStatus("送信に失敗しました。時間をおいて再度お試しください。", "error");
+        })
+        .finally(() => {
+          if (submitButton) submitButton.disabled = false;
+        });
+    });
+  }
 })();

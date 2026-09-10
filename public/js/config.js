@@ -14,3 +14,11 @@
 window.NOTICE_CONFIG = {
   SHEET_CSV_URL: ""
 };
+
+// お問い合わせフォームの送信先設定です(Web3Forms https://web3forms.com/ を利用)。
+//   1. web3forms.com で無料登録し、Access Key を発行する(バックエンド不要)
+//   2. 発行されたキーを下の CONTACT_ACCESS_KEY に貼り付ける
+// 未設定(空文字)の間は、フォーム送信時に「デモのため送信できません」という案内を表示します。
+window.CONTACT_CONFIG = {
+  CONTACT_ACCESS_KEY: ""
+};

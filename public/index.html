@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>麺処 ひなた | 個人経営ラーメン店(サンプルサイト)</title>
-<meta name="description" content="麺処 ひなた — 心もお腹もあたたまる一杯を。醤油・塩・味噌など、素材にこだわったラーメンをご提供する個人経営のラーメン店です。※本サイトは架空店舗のサンプル(ポートフォリオ)です。">
+<title>麺処 ぬくもり庵 | 個人経営ラーメン店(サンプルサイト)</title>
+<meta name="description" content="麺処 ぬくもり庵 — 心もお腹もあたたまる一杯を。醤油・塩・味噌など、素材にこだわったラーメンをご提供する個人経営のラーメン店です。※本サイトは架空店舗のサンプル(ポートフォリオ)です。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,14 +13,11 @@
 <body>
 
 <!-- ※このサイトは架空店舗の営業用サンプル(ポートフォリオ)です -->
-<div class="sample-bar">ポートフォリオ用サンプルサイトです(架空店舗・実在のお店ではありません)</div>
+<div class="sample-bar">ポートフォリオ用サンプルサイトです(架空店舗)</div>
 
 <header class="site-header">
   <div class="container">
-    <a href="#hero" class="brand">麺処 ひなた</a>
-    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="mainNav">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="#hero" class="brand">麺処 ぬくもり庵</a>
   </div>
 </header>
 
@@ -29,6 +26,7 @@
     <li><a href="#menu">メニュー</a></li>
     <li><a href="#access">アクセス</a></li>
     <li><a href="#hours">営業時間</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
     <li><a href="#sns">SNS</a></li>
   </ul>
 </nav>
@@ -45,8 +43,9 @@
   <section class="hero" id="hero">
     <div class="container hero-inner">
       <p class="hero-eyebrow">個人経営・一杯入魂</p>
-      <h1>心もお腹も、<br>あたたまる一杯を。</h1>
-      <p>厳選した素材でとった出汁と、丁寧に打った自家製麺。麺処 ひなたは、あたたかい時間をお届けするラーメン店です。</p>
+      <h1 class="hero-brand">麺処 ぬくもり庵</h1>
+      <p class="hero-catch">心もお腹も、あたたまる一杯を。</p>
+      <p class="hero-lead">厳選した素材でとった出汁と、丁寧に打った自家製麺。麺処 ぬくもり庵は、あたたかい時間をお届けするラーメン店です。</p>
       <a class="btn" href="#menu">メニューを見る</a>
     </div>
   </section>
@@ -128,7 +127,7 @@
       <div class="access-grid">
         <dl class="access-info">
           <dt>店名</dt>
-          <dd>麺処 ひなた(サンプル)</dd>
+          <dd>麺処 ぬくもり庵(サンプル)</dd>
 
           <dt>住所</dt>
           <dd>〒111-0032<br>東京都台東区浅草2-3-1(サンプル住所)</dd>
@@ -182,6 +181,33 @@
     </div>
   </section>
 
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2>お問い合わせ</h2>
+      </div>
+      <p class="section-lead">ご予約のご相談やご質問など、お気軽にお問い合わせください。</p>
+
+      <!-- Web3Forms連携：public/js/config.js の CONTACT_ACCESS_KEY を設定すると送信できるようになります -->
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <label for="cf-name">お名前</label>
+          <input type="text" id="cf-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-row">
+          <label for="cf-email">メールアドレス</label>
+          <input type="email" id="cf-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-row">
+          <label for="cf-message">お問い合わせ内容</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">送信する</button>
+        <p class="form-status" id="formStatus" hidden></p>
+      </form>
+    </div>
+  </section>
+
   <section class="section section-alt" id="sns">
     <div class="container">
       <div class="section-head">
@@ -213,9 +239,9 @@
 
 <footer class="site-footer">
   <div class="container">
-    <span class="brand">麺処 ひなた</span>
+    <span class="brand">麺処 ぬくもり庵</span>
     <address>〒111-0032 東京都台東区浅草2-3-1(サンプル住所)｜03-0000-0000</address>
-    <p class="copyright">&copy; 2026 麺処 ひなた. This is a fictional sample site for portfolio use.</p>
+    <p class="copyright">&copy; 2026 麺処 ぬくもり庵. This is a fictional sample site for portfolio use.</p>
   </div>
 </footer>
 
