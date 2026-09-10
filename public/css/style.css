@@ -13,7 +13,9 @@
   --accent-dark: #a85f2a;
   --accent-soft: #f1d9a8;
   --line: #e7dcc8;
+  --sample-bar-h: 34px;
   --header-h: 64px;
+  --top-offset: calc(var(--sample-bar-h) + var(--header-h));
 }
 
 * {
@@ -50,20 +52,39 @@ a {
 }
 
 section {
-  scroll-margin-top: var(--header-h);
+  scroll-margin-top: var(--top-offset);
+}
+
+/* ---------- サンプルサイト表示バー ---------- */
+.sample-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--sample-bar-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2a2118;
+  color: #f4ece0;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  padding: 0 12px;
+  text-align: center;
+  z-index: 200;
 }
 
 /* ---------- ヘッダー ---------- */
 .site-header {
   position: fixed;
-  top: 0;
+  top: var(--sample-bar-h);
   left: 0;
   right: 0;
   height: var(--header-h);
   background: rgba(250, 246, 239, 0.92);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
-  z-index: 100;
+  z-index: 150;
 }
 
 .site-header .container {
@@ -103,7 +124,7 @@ section {
 
 .main-nav {
   position: fixed;
-  top: var(--header-h);
+  top: var(--top-offset);
   left: 0;
   right: 0;
   background: var(--bg);
@@ -166,7 +187,7 @@ section {
 /* ---------- ヒーロー ---------- */
 .hero {
   position: relative;
-  padding-top: var(--header-h);
+  padding-top: var(--top-offset);
   min-height: 88vh;
   display: flex;
   align-items: flex-end;
@@ -191,14 +212,12 @@ section {
 }
 
 .hero-eyebrow {
-  display: inline-block;
-  font-size: 0.8rem;
-  letter-spacing: 0.15em;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 999px;
-  padding: 4px 14px;
-  margin-bottom: 16px;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  margin: 0 0 14px;
+  padding-left: 14px;
+  border-left: 3px solid var(--accent);
+  opacity: 0.92;
 }
 
 .hero h1 {
@@ -220,20 +239,20 @@ section {
   background: var(--accent);
   color: #fff;
   text-decoration: none;
-  padding: 12px 28px;
-  border-radius: 999px;
+  padding: 13px 30px;
+  border-radius: 4px;
   font-weight: 700;
-  box-shadow: 0 8px 20px rgba(201, 122, 61, 0.35);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  letter-spacing: 0.03em;
+  transition: background-color 0.15s ease;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(201, 122, 61, 0.45);
+  background: var(--accent-dark);
 }
 
 /* ---------- 臨時休業バナー ---------- */
 .notice-banner {
+  margin-top: var(--top-offset);
   background: #fbeadb;
   border-bottom: 1px solid var(--accent-soft);
 }
@@ -272,14 +291,6 @@ section {
 .section-head {
   text-align: center;
   margin-bottom: 40px;
-}
-
-.section-head .en {
-  display: block;
-  font-size: 0.78rem;
-  letter-spacing: 0.25em;
-  color: var(--accent);
-  margin-bottom: 8px;
 }
 
 .section-head h2 {
