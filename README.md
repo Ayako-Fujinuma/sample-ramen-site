@@ -30,7 +30,7 @@
 │   ├── js/main.js
 │   ├── js/config.js     # 臨時休業のお知らせの連携設定
 │   ├── js/notices.json  # 臨時休業のお知らせ(デフォルトのお知らせデータ)
-│   └── images/          # プレースホルダー画像（差し替え方は images/README.md 参照）
+│   └── images/          # 店舗写真(AI生成のサンプル画像。差し替え方は images/README.md 参照)
 ├── wrangler.jsonc        # Workers Static Assets の設定
 ├── package.json
 └── README.md
@@ -103,7 +103,7 @@ npm run deploy
 
 ## 差し替えが必要な箇所
 
-- `public/images/` 内のプレースホルダー画像 → 実写真(詳細は [`public/images/README.md`](public/images/README.md))
+- `public/images/` 内の画像(AI生成のサンプル写真) → 実店舗の写真(詳細は [`public/images/README.md`](public/images/README.md))
 - `public/index.html` のアクセス情報(住所・最寄駅・電話番号)、Googleマップの座標
 - `public/index.html` のSNSリンク(Instagram / X のダミーURL)
 - `public/index.html` のメニュー内容・価格

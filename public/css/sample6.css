@@ -3,7 +3,7 @@
 .hero-photo-forward {
   align-items: flex-end;
   justify-content: flex-start;
-  /* hero-bg.svg のどんぶりは画像の縦62%あたりにあるため、コンテナの縦横比が
+  /* hero-bg.jpeg のどんぶりは画像の縦62%あたりにあるため、コンテナの縦横比が
      変わっても常にどんぶりが見える位置になるよう割合で指定する(bottom指定だと
      縦長のスマホ画面でどんぶりが画面外に切れてしまう) */
   background-position: center 62%;
