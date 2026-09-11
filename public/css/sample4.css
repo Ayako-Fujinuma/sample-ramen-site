@@ -106,11 +106,38 @@ img {
   opacity: 0.35;
 }
 
-.s4-hero-inner {
+.s4-hero-grid {
   position: relative;
   z-index: 1;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: center;
   padding-top: 40px;
+}
+
+@media (min-width: 860px) {
+  .s4-hero-grid {
+    grid-template-columns: 1.05fr 1fr;
+  }
+
+  .s4-hero-inner {
+    text-align: left;
+  }
+}
+
+.s4-hero-inner {
+  text-align: center;
+}
+
+.s4-hero-photo img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 4px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+  transform: rotate(-3deg);
 }
 
 .s4-eyebrow {
