@@ -1,0 +1,51 @@
+/* サンプル6：ヒーローで写真(ラーメン)をしっかり見せるバリエーション。
+   style.css の .hero をベースに、暗いグラデーションを外してカード型の文字パネルに変更する */
+.hero-photo-forward {
+  align-items: flex-end;
+  justify-content: flex-start;
+  /* hero-bg.svg のどんぶりは画像の縦62%あたりにあるため、コンテナの縦横比が
+     変わっても常にどんぶりが見える位置になるよう割合で指定する(bottom指定だと
+     縦長のスマホ画面でどんぶりが画面外に切れてしまう) */
+  background-position: center 62%;
+}
+
+.hero-photo-forward::after {
+  content: none;
+}
+
+.hero-photo-forward .hero-inner {
+  width: auto;
+  max-width: 460px;
+  background: rgba(250, 246, 239, 0.95);
+  backdrop-filter: blur(2px);
+  border-radius: 16px;
+  padding: 28px 30px;
+  margin: 0 0 40px;
+  color: var(--text);
+  box-shadow: 0 10px 30px rgba(58, 46, 38, 0.18);
+}
+
+.hero-photo-forward .hero-lead {
+  color: var(--text-sub);
+}
+
+.hero-photo-forward .hero-brand {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+}
+
+.hero-photo-forward .hero-catch {
+  font-size: clamp(1rem, 2.6vw, 1.25rem);
+}
+
+@media (max-width: 640px) {
+  /* スマホは縦長になり、下寄せカードだと写真下部(どんぶりの位置)と重なってしまうため、
+     カードを上寄せにして、どんぶりが見える下部を開ける */
+  .hero-photo-forward {
+    min-height: 88vh;
+    align-items: flex-start;
+  }
+
+  .hero-photo-forward .hero-lead {
+    display: none;
+  }
+}

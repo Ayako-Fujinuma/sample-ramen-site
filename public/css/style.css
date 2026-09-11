@@ -404,6 +404,56 @@ section {
   font-weight: 700;
 }
 
+/* ---------- お問い合わせフォーム(見た目確認用・送信機能なし) ---------- */
+.contact-form {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.form-row {
+  margin-bottom: 18px;
+}
+
+.form-row label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-sub);
+  margin-bottom: 6px;
+}
+
+.form-row input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.form-row input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.contact-form .btn {
+  width: 100%;
+}
+
+.form-hint {
+  margin: 10px 0 0;
+  font-size: 0.78rem;
+  color: var(--text-sub);
+  text-align: center;
+}
+
+.text-link {
+  color: var(--accent-dark);
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
 /* ---------- SNS ---------- */
 .sns-list {
   display: flex;
