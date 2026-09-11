@@ -47,8 +47,21 @@
       <p class="s2-lead">出汁の澄んだ一杯を、静かな時間の中で。</p>
       <a class="s2-btn" href="#menu">メニューを見る</a>
     </div>
-    <div class="s2-hero-image" style="background-image:url('images/hero-bg.jpeg');"></div>
+    <div
+      class="s2-hero-image"
+      style="background-image:url('images/hero-bg.jpeg');"
+      role="button"
+      tabindex="0"
+      aria-label="写真を拡大表示"
+      id="heroZoomTrigger"
+    ></div>
   </section>
+
+  <!-- 写真タップで拡大表示するライトボックス -->
+  <div class="s2-lightbox" id="heroLightbox" hidden>
+    <button type="button" class="s2-lightbox-close" id="heroLightboxClose" aria-label="閉じる">&times;</button>
+    <img src="images/hero-bg.jpeg" alt="麺処 ぬくもり庵の看板ラーメン">
+  </div>
 
   <section class="s2-section" id="menu">
     <div class="s2-wrap">
@@ -155,5 +168,31 @@
   </div>
 </footer>
 
+<script>
+(() => {
+  const trigger = document.getElementById("heroZoomTrigger");
+  const lightbox = document.getElementById("heroLightbox");
+  const closeBtn = document.getElementById("heroLightboxClose");
+  if (!trigger || !lightbox || !closeBtn) return;
+
+  const open = () => { lightbox.hidden = false; };
+  const close = () => { lightbox.hidden = true; };
+
+  trigger.addEventListener("click", open);
+  trigger.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      open();
+    }
+  });
+  closeBtn.addEventListener("click", close);
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") close();
+  });
+})();
+</script>
 </body>
 </html>

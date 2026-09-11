@@ -148,6 +148,49 @@ img {
   min-height: 320px;
   background-size: cover;
   background-position: center;
+  cursor: zoom-in;
+}
+
+/* 写真タップで拡大表示するライトボックス */
+.s2-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.92);
+  cursor: zoom-out;
+}
+
+.s2-lightbox[hidden] {
+  display: none;
+}
+
+.s2-lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.s2-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.s2-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* ---------- セクション共通 ---------- */
