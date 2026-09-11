@@ -237,6 +237,11 @@ section {
   padding: 64px 0;
 }
 
+/* ヒーローを持たない単独ページ(お問い合わせ等)で、固定ヘッダー分の余白を確保する */
+.section-first {
+  padding-top: calc(var(--top-offset) + 64px);
+}
+
 .section-alt {
   background: var(--bg-alt);
 }
@@ -397,58 +402,6 @@ section {
 .closed-day {
   color: var(--accent-dark);
   font-weight: 700;
-}
-
-/* ---------- お問い合わせフォーム ---------- */
-.contact-form {
-  max-width: 480px;
-  margin: 0 auto;
-}
-
-.form-row {
-  margin-bottom: 18px;
-}
-
-.form-row label {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--text-sub);
-  margin-bottom: 6px;
-}
-
-.form-row input,
-.form-row textarea {
-  width: 100%;
-  padding: 10px 14px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--card);
-  color: var(--text);
-  font-family: inherit;
-  font-size: 0.95rem;
-}
-
-.form-row input:focus,
-.form-row textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-.form-row textarea {
-  resize: vertical;
-}
-
-.form-status {
-  margin: 14px 0 0;
-  font-size: 0.9rem;
-}
-
-.form-status.is-success {
-  color: #4a7a3f;
-}
-
-.form-status.is-error {
-  color: #b3402c;
 }
 
 /* ---------- SNS ---------- */

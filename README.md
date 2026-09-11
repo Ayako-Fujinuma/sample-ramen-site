@@ -17,7 +17,7 @@
 | `sample4.html` | ポップ・カジュアル(明るい配色、丸み) |
 | `sample5.html` | 雑誌風フォトファースト(非対称グリッド) |
 
-Sample2〜5はデザイン比較用の簡易版で、臨時休業お知らせ(スプレッドシート連携)とお問い合わせフォーム送信の実装はSample1にのみ搭載しています。採用するデザインが決まったら、Sample1の仕組みをそのレイアウトに移植してください。
+Sample2〜5はデザイン比較用の簡易版で、臨時休業お知らせ(スプレッドシート連携)はSample1にのみ搭載しています。採用するデザインが決まったら、Sample1の仕組みをそのレイアウトに移植してください。
 
 ## 構成
 
@@ -27,7 +27,7 @@ Sample2〜5はデザイン比較用の簡易版で、臨時休業お知らせ(�
 │   ├── index.html
 │   ├── css/style.css
 │   ├── js/main.js
-│   ├── js/config.js     # 臨時休業のお知らせ・お問い合わせフォームの連携設定
+│   ├── js/config.js     # 臨時休業のお知らせの連携設定
 │   ├── js/notices.json  # 臨時休業のお知らせ(デフォルトのお知らせデータ)
 │   └── images/          # プレースホルダー画像（差し替え方は images/README.md 参照）
 ├── wrangler.jsonc        # Workers Static Assets の設定
@@ -67,20 +67,11 @@ window.NOTICE_CONFIG = {
 
 配列を空 `[]` にすれば、お知らせ表示は自動的に非表示になります。
 
-## お問い合わせフォーム
+## お問い合わせページ
 
-[Web3Forms](https://web3forms.com/)(登録無料・バックエンド不要)と連携しています。
+各デザイン案の「お問い合わせ」は、同一ページにフォームをまるごと表示するのではなく `contact.html` へのリンクにしてあります。現状の `contact.html` は「ここにフォームを設置します」という説明のみのプレースホルダーです。
 
-1. web3forms.com で登録し、Access Key を発行する
-2. `public/js/config.js` の `CONTACT_ACCESS_KEY` に貼り付ける
-
-```js
-window.CONTACT_CONFIG = {
-  CONTACT_ACCESS_KEY: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-};
-```
-
-未設定のままだと、送信時に「サンプルサイトのため送信は無効になっています」という案内を表示します(誤送信防止のためのデモ用ガードです)。
+実際に稼働させる際は、[Web3Forms](https://web3forms.com/)(登録無料・バックエンド不要)などと連携してフォームを実装してください。
 
 ## ローカルで確認する
 
@@ -115,4 +106,5 @@ npm run deploy
 - `public/index.html` のアクセス情報(住所・最寄駅・電話番号)、Googleマップの座標
 - `public/index.html` のSNSリンク(Instagram / X のダミーURL)
 - `public/index.html` のメニュー内容・価格
+- `public/contact.html` のプレースホルダー文言 → 実際のお問い合わせフォーム
 - `wrangler.jsonc` の `name`(Workersのプロジェクト名。業種を変えて流用する場合はここも変更)
