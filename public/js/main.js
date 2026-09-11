@@ -1,6 +1,18 @@
 (() => {
   const NOTICE_TOOLTIP = "サンプル：実際の運用ではGoogleスプレッドシートを編集するだけで更新できます";
 
+  // ヘッダー(ロゴ+ナビ)の実際の高さを --header-h に反映する。
+  // 画面幅によってナビが折り返しても、ヒーローやお知らせバナーがヘッダーと重ならないようにするため。
+  const siteHeader = document.querySelector(".site-header");
+  if (siteHeader) {
+    const applyHeaderHeight = () => {
+      document.documentElement.style.setProperty("--header-h", `${siteHeader.offsetHeight}px`);
+    };
+    applyHeaderHeight();
+    window.addEventListener("resize", applyHeaderHeight);
+    window.addEventListener("load", applyHeaderHeight);
+  }
+
   // Googleスプレッドシートを「ウェブに公開」した際のCSVをパースする(ダブルクォート内のカンマ・改行に対応)
   function parseCsvRows(text) {
     const rows = [];

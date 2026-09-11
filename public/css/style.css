@@ -13,8 +13,7 @@
   --accent-dark: #a85f2a;
   --accent-soft: #f1d9a8;
   --line: #e7dcc8;
-  --header-h: 64px;
-  --nav-h: 57px;
+  --header-h: 72px;
   --top-offset: calc(var(--samples-bar-h) + var(--header-h));
 }
 
@@ -52,16 +51,17 @@ a {
 }
 
 section {
-  scroll-margin-top: calc(var(--top-offset) + var(--nav-h));
+  scroll-margin-top: var(--top-offset);
 }
 
 /* ---------- ヘッダー ---------- */
+/* 「メニュー」「アクセス」等はピルの帯にせず、ロゴと同じ行に収まる文字リンクにして
+   ファーストビューの高さを圧迫しないようにする */
 .site-header {
   position: fixed;
   top: var(--samples-bar-h);
   left: 0;
   right: 0;
-  height: var(--header-h);
   background: rgba(250, 246, 239, 0.92);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
@@ -69,10 +69,14 @@ section {
 }
 
 .site-header .container {
-  height: 100%;
+  min-height: var(--header-h);
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
+  gap: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .brand {
@@ -83,49 +87,44 @@ section {
   color: var(--accent-dark);
 }
 
-/* 「メニュー」「アクセス」がスマホでも常に見えるよう、ハンバーガーに隠さず横並びの帯で常時表示する */
-.main-nav {
-  position: sticky;
-  top: var(--top-offset);
-  margin-top: var(--top-offset);
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  z-index: 90;
+.header-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
 }
 
-.main-nav ul {
-  list-style: none;
-  margin: 0 auto;
-  max-width: 1080px;
-  padding: 10px 20px;
-  display: flex;
-  gap: 8px;
+.header-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
   white-space: nowrap;
 }
 
-.main-nav a {
-  display: inline-block;
-  padding: 8px 16px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--card);
-  text-decoration: none;
-  font-size: 0.85rem;
-  color: var(--text);
-  transition: background-color 0.15s ease, border-color 0.15s ease;
+.header-nav a:hover,
+.header-nav a:focus-visible {
+  color: var(--accent-dark);
+  text-decoration: underline;
 }
 
-.main-nav a:hover,
-.main-nav a:focus-visible {
-  background: var(--accent-soft);
-  border-color: var(--accent-soft);
+@media (min-width: 800px) {
+  .site-header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .header-nav {
+    gap: 24px;
+  }
 }
 
 /* ---------- ヒーロー ---------- */
 .hero {
   position: relative;
+  padding-top: var(--top-offset);
   min-height: clamp(480px, 76vh, 640px);
   display: flex;
   align-items: center;
@@ -202,6 +201,7 @@ section {
 
 /* ---------- 臨時休業バナー ---------- */
 .notice-banner {
+  margin-top: var(--top-offset);
   background: #fbeadb;
   border-bottom: 1px solid var(--accent-soft);
 }
