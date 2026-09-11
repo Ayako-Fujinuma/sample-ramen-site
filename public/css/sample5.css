@@ -105,17 +105,6 @@ img {
   color: #fff;
 }
 
-.s5-issue {
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-  color: var(--accent);
-  background: #fff;
-  display: inline-block;
-  padding: 4px 12px;
-  margin: 0 0 20px;
-  font-weight: 700;
-}
-
 .s5-hero-text h1 {
   font-size: clamp(3rem, 12vw, 6.5rem);
   font-weight: 900;
