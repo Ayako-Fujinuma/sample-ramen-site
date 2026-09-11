@@ -3,18 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>麺処 ぬくもり庵 | デザイン案 サンプル6(写真どーん・ラーメンが主役)</title>
+<title>麺処 ぬくもり庵 | デザイン案 サンプル6(フォトジェニック・ダーク)</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/samples.css">
-<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/sample6.css">
 </head>
 <body>
 
-<!-- ※このサイトは架空店舗の営業用サンプル(ポートフォリオ)です -->
 <div class="samples-bar">
   <p class="disclaimer">ポートフォリオ用サンプルサイトです(架空店舗)</p>
   <nav class="tabs" aria-label="デザイン案の切り替え">
@@ -28,207 +26,153 @@
 </div>
 <script src="js/samples-bar.js"></script>
 
-<header class="site-header">
-  <div class="container">
-    <a href="#hero" class="brand">麺処 ぬくもり庵</a>
-    <nav class="header-nav" aria-label="サイト内リンク">
+<header class="s6-header">
+  <div class="s6-wrap">
+    <span class="s6-logo">麺処 ぬくもり庵</span>
+    <nav class="s6-nav">
       <a href="#menu">メニュー</a>
       <a href="#access">アクセス</a>
       <a href="#hours">営業時間</a>
       <a href="contact.html">お問い合わせ</a>
-      <a href="#sns">SNS</a>
     </nav>
   </div>
 </header>
 
-<!-- 臨時休業のお知らせ：public/js/notices.json を編集するとここに表示されます -->
-<div class="notice-banner" id="noticeBanner" hidden>
-  <div class="container">
-    <ul id="noticeList"></ul>
-  </div>
-</div>
-
 <main>
 
-  <section class="hero hero-photo-forward" id="hero">
-    <div class="container hero-inner">
-      <p class="hero-eyebrow">個人経営・一杯入魂</p>
-      <h1 class="hero-brand">麺処 ぬくもり庵</h1>
-      <p class="hero-catch">心もお腹も、あたたまる一杯を。</p>
-      <p class="hero-lead">厳選した素材でとった出汁と、丁寧に打った自家製麺。麺処 ぬくもり庵は、あたたかい時間をお届けするラーメン店です。</p>
-      <a class="btn" href="#menu">メニューを見る</a>
+  <section class="s6-hero">
+    <div class="s6-hero-card">
+      <p class="s6-eyebrow">個人経営・一杯入魂</p>
+      <h1>麺処 ぬくもり庵</h1>
+      <p class="s6-catch">心もお腹も、あたたまる一杯を。</p>
+      <a class="s6-btn" href="#menu">メニューを見る</a>
     </div>
+    <div class="s6-hero-photo" style="background-image:url('images/hero-bg.jpeg');"></div>
   </section>
 
-  <section class="section" id="menu">
-    <div class="container">
-      <div class="section-head">
-        <h2>看板メニュー</h2>
-      </div>
-      <p class="section-lead">毎朝仕込むスープと自家製麺が自慢です。全メニュー、替え玉・トッピングもご用意しております。</p>
+  <section class="s6-section" id="menu">
+    <div class="s6-wrap">
+      <p class="s6-kicker">MENU</p>
+      <h2 class="s6-heading">看板メニュー</h2>
 
-      <div class="menu-grid">
-
-        <article class="menu-card">
-          <img src="images/menu-shoyu.jpeg" alt="特製醤油ラーメン" loading="lazy">
-          <div class="menu-card-body">
-            <div class="menu-card-title">
-              <h3>特製醤油ラーメン</h3>
-              <span class="menu-price">¥950</span>
-            </div>
+      <div class="s6-slider-wrap">
+        <div class="s6-slider-track" id="menuSlider">
+          <article class="s6-slide">
+            <img src="images/menu-shoyu.jpeg" alt="特製醤油ラーメン">
+            <h3>特製醤油ラーメン</h3>
             <p>鶏と煮干しの澄んだ醤油スープに、自家製の細麺がよく絡みます。</p>
-          </div>
-        </article>
-
-        <article class="menu-card">
-          <img src="images/menu-shio.jpeg" alt="塩ラーメン" loading="lazy">
-          <div class="menu-card-body">
-            <div class="menu-card-title">
-              <h3>塩ラーメン</h3>
-              <span class="menu-price">¥900</span>
-            </div>
+            <span class="s6-price">¥950</span>
+          </article>
+          <article class="s6-slide">
+            <img src="images/menu-shio.jpeg" alt="塩ラーメン">
+            <h3>塩ラーメン</h3>
             <p>昆布と貝出汁の効いた、やさしい塩味のあっさりスープ。</p>
-          </div>
-        </article>
-
-        <article class="menu-card">
-          <img src="images/menu-miso-butter-corn.jpeg" alt="味噌バターコーン" loading="lazy">
-          <div class="menu-card-body">
-            <div class="menu-card-title">
-              <h3>味噌バターコーン</h3>
-              <span class="menu-price">¥1,050</span>
-            </div>
+            <span class="s6-price">¥900</span>
+          </article>
+          <article class="s6-slide">
+            <img src="images/menu-miso-butter-corn.jpeg" alt="味噌バターコーン">
+            <h3>味噌バターコーン</h3>
             <p>コクのある合わせ味噌に、バターと甘いコーンをのせて。</p>
-          </div>
-        </article>
-
-        <article class="menu-card">
-          <img src="images/menu-tsukemen.jpeg" alt="特製つけ麺" loading="lazy">
-          <div class="menu-card-body">
-            <div class="menu-card-title">
-              <h3>特製つけ麺</h3>
-              <span class="menu-price">¥1,100</span>
-            </div>
+            <span class="s6-price">¥1,050</span>
+          </article>
+          <article class="s6-slide">
+            <img src="images/menu-tsukemen.jpeg" alt="特製つけ麺">
+            <h3>特製つけ麺</h3>
             <p>魚介と豚骨をじっくり煮込んだ、濃厚な深みのあるつけ汁。</p>
-          </div>
-        </article>
-
-        <article class="menu-card">
-          <img src="images/menu-veggie.jpeg" alt="野菜たっぷり塩そば" loading="lazy">
-          <div class="menu-card-body">
-            <div class="menu-card-title">
-              <h3>野菜たっぷり塩そば</h3>
-              <span class="menu-price">¥980</span>
-            </div>
+            <span class="s6-price">¥1,100</span>
+          </article>
+          <article class="s6-slide">
+            <img src="images/menu-veggie.jpeg" alt="野菜たっぷり塩そば">
+            <h3>野菜たっぷり塩そば</h3>
             <p>彩り野菜をたっぷりのせた、あっさり食べられる一杯です。</p>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="access">
-    <div class="container">
-      <div class="section-head">
-        <h2>アクセス</h2>
-      </div>
-
-      <div class="access-grid">
-        <dl class="access-info">
-          <dt>店名</dt>
-          <dd>麺処 ぬくもり庵(サンプル)</dd>
-
-          <dt>住所</dt>
-          <dd>〒111-0032<br>東京都台東区浅草2-3-1(サンプル住所)</dd>
-
-          <dt>最寄駅</dt>
-          <dd>東京メトロ 浅草駅より徒歩5分</dd>
-
-          <dt>電話番号</dt>
-          <dd>03-0000-0000(サンプル)</dd>
-        </dl>
-
-        <!-- Googleマップ：ダミー座標を埋め込んでいます。実店舗の住所に合わせて座標・q= の値を差し替えてください -->
-        <div class="map-frame">
-          <iframe
-            src="https://www.google.com/maps?q=35.7148,139.7967&z=16&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="店舗地図(サンプル座標)">
-          </iframe>
+            <span class="s6-price">¥980</span>
+          </article>
+        </div>
+        <div class="s6-slider-controls">
+          <button type="button" class="s6-slider-btn" id="menuPrev" aria-label="前のメニューへ">‹</button>
+          <button type="button" class="s6-slider-btn" id="menuNext" aria-label="次のメニューへ">›</button>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="hours">
-    <div class="container">
-      <div class="section-head">
-        <h2>営業時間・定休日</h2>
+  <section class="s6-section s6-section-alt" id="access">
+    <div class="s6-wrap s6-two-col">
+      <div>
+        <p class="s6-kicker">ACCESS</p>
+        <h2 class="s6-heading">アクセス</h2>
+        <dl class="s6-def">
+          <dt>住所</dt>
+          <dd>〒111-0032 東京都台東区浅草2-3-1(サンプル住所)</dd>
+          <dt>最寄駅</dt>
+          <dd>東京メトロ 浅草駅より徒歩5分</dd>
+          <dt>電話番号</dt>
+          <dd>03-0000-0000(サンプル)</dd>
+        </dl>
       </div>
-
-      <table class="hours-table">
-        <tr>
-          <th>ランチ</th>
-          <td>11:00 〜 14:30(L.O. 14:00)</td>
-        </tr>
-        <tr>
-          <th>ディナー</th>
-          <td>17:30 〜 21:00(L.O. 20:30)</td>
-        </tr>
-        <tr>
-          <th>定休日</th>
-          <td class="closed-day">毎週水曜日・第3木曜日</td>
-        </tr>
-      </table>
-
-      <!-- 臨時休業のお知らせ一覧（notices.jsonから自動生成） -->
-      <div id="hoursNotice" hidden style="max-width:480px;margin:24px auto 0;">
-        <p style="font-weight:700;color:var(--accent-dark);text-align:center;margin-bottom:8px;">臨時休業のお知らせ</p>
-        <ul id="hoursNoticeList" style="list-style:none;padding:0;margin:0;text-align:center;color:var(--text-sub);font-size:0.9rem;"></ul>
+      <div class="s6-map">
+        <iframe
+          src="https://www.google.com/maps?q=35.7148,139.7967&z=16&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="店舗地図(サンプル座標)">
+        </iframe>
       </div>
     </div>
   </section>
 
-  <section class="section section-alt" id="sns">
-    <div class="container">
-      <div class="section-head">
-        <h2>SNSでも発信しています</h2>
-      </div>
+  <section class="s6-section" id="hours">
+    <div class="s6-wrap">
+      <p class="s6-kicker">HOURS</p>
+      <h2 class="s6-heading">営業時間</h2>
+      <dl class="s6-def s6-def-row">
+        <dt>ランチ</dt>
+        <dd>11:00 〜 14:30(L.O. 14:00)</dd>
+        <dt>ディナー</dt>
+        <dd>17:30 〜 21:00(L.O. 20:30)</dd>
+        <dt>定休日</dt>
+        <dd>毎週水曜日・第3木曜日</dd>
+      </dl>
+      <!-- サンプル：実際の運用ではGoogleスプレッドシートを編集するだけで更新できます(詳細はサンプル1参照) -->
+      <p class="s6-notice" title="サンプル：実際の運用ではGoogleスプレッドシートを編集するだけで更新できます">2026-09-20：設備点検のため、臨時休業いたします。</p>
+    </div>
+  </section>
 
-      <ul class="sns-list">
-        <li>
-          <!-- ダミーURL：実際のInstagramアカウントに差し替えてください -->
-          <a href="https://instagram.com/example" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg class="icon-sns" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 2.02.25 2.73.53a5.5 5.5 0 0 1 2 1.3 5.5 5.5 0 0 1 1.3 2c.28.71.48 1.56.53 2.73.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 2.02-.53 2.73a5.5 5.5 0 0 1-1.3 2 5.5 5.5 0 0 1-2 1.3c-.71.28-1.56.48-2.73.53-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-2.02-.25-2.73-.53a5.5 5.5 0 0 1-2-1.3 5.5 5.5 0 0 1-1.3-2c-.28-.71-.48-1.56-.53-2.73C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-2.02.53-2.73a5.5 5.5 0 0 1 1.3-2 5.5 5.5 0 0 1 2-1.3c.71-.28 1.56-.48 2.73-.53C8.4 2.2 8.8 2.2 12 2.2zm0 3.03A6.77 6.77 0 1 0 12 18.8 6.77 6.77 0 0 0 12 5.23zm0 2.16a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2zm6.4-2.4a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <!-- ダミーURL：実際のXアカウントに差し替えてください -->
-          <a href="https://x.com/example" target="_blank" rel="noopener noreferrer" aria-label="X（旧Twitter）">
-            <svg class="icon-sns" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M18.9 2H22l-7.4 8.46L23 22h-6.9l-5.4-6.6L4.5 22H1.4l7.9-9.04L1 2h7.1l4.9 6.02L18.9 2zm-1.2 18h1.9L7.4 4h-2l12.3 16z"/>
-            </svg>
-          </a>
-        </li>
-      </ul>
+  <section class="s6-section s6-section-alt" id="contact">
+    <div class="s6-wrap">
+      <p class="s6-kicker">CONTACT</p>
+      <h2 class="s6-heading">お問い合わせ</h2>
+      <p class="s6-lead-sub">ご予約のご相談やご質問など、お気軽にお問い合わせください。</p>
+      <a class="s6-btn" href="contact.html">お問い合わせフォームへ</a>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <span class="brand">麺処 ぬくもり庵</span>
-    <address>〒111-0032 東京都台東区浅草2-3-1(サンプル住所)｜03-0000-0000</address>
-    <p class="copyright">&copy; 2026 麺処 ぬくもり庵. ポートフォリオ用の架空店舗サンプルです。</p>
+<footer class="s6-footer">
+  <div class="s6-wrap">
+    <p>麺処 ぬくもり庵 ｜ 〒111-0032 東京都台東区浅草2-3-1(サンプル住所)</p>
+    <p class="s6-copyright">&copy; 2026 麺処 ぬくもり庵. ポートフォリオ用の架空店舗サンプルです。</p>
   </div>
 </footer>
 
-<script src="js/config.js"></script>
-<script src="js/main.js"></script>
+<script>
+(() => {
+  const track = document.getElementById("menuSlider");
+  const prev = document.getElementById("menuPrev");
+  const next = document.getElementById("menuNext");
+  if (!track || !prev || !next) return;
+
+  const scrollByOne = (dir) => {
+    const slide = track.querySelector(".s6-slide");
+    const gap = 20;
+    const amount = (slide ? slide.getBoundingClientRect().width : 300) + gap;
+    track.scrollBy({ left: amount * dir, behavior: "auto" });
+  };
+
+  prev.addEventListener("click", () => scrollByOne(-1));
+  next.addEventListener("click", () => scrollByOne(1));
+})();
+</script>
 </body>
 </html>
