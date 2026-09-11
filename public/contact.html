@@ -50,6 +50,7 @@
 
       <!-- サンプル用のフォームです。見た目の確認用で、実際の送信機能はありません -->
       <form class="contact-form" onsubmit="event.preventDefault();">
+        <p class="form-hint form-hint-top">※このサンプルでは送信されません</p>
         <div class="form-row">
           <label for="cf-name">お名前</label>
           <input type="text" id="cf-name" name="name" autocomplete="name">
@@ -63,7 +64,6 @@
           <textarea id="cf-message" name="message" rows="5"></textarea>
         </div>
         <button type="submit" class="btn">送信する</button>
-        <p class="form-hint">※このサンプルでは送信されません</p>
       </form>
 
       <p style="text-align:center;margin-top:32px;">

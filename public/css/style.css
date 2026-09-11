@@ -454,6 +454,10 @@ section {
   text-align: center;
 }
 
+.form-hint-top {
+  margin: 0 0 20px;
+}
+
 .text-link {
   color: var(--accent-dark);
   font-size: 0.9rem;
