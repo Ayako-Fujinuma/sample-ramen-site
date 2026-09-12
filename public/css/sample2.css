@@ -120,10 +120,14 @@ img {
 @media (min-width: 900px) {
   .s2-hero-image {
     order: 0;
+    flex: 1;
   }
 
+  /* 広い画面だとテキスト側だけ間延びして中央が空くため、テキスト幅は
+     content量に合わせて頭打ちにし、余った分は写真側に渡す */
   .s2-hero-text {
-    padding: 60px 24px;
+    flex: 0 1 480px;
+    padding: 60px 48px;
   }
 }
 
