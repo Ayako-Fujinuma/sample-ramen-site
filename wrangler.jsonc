@@ -8,8 +8,8 @@
     "directory": "./public",
     "not_found_handling": "404-page"
   },
-  // 旧URL(*.workers.dev)も残しつつ、カスタムドメインを追加する
-  "workers_dev": true,
+  // 独自ドメインに一本化。旧URL(*.workers.dev)は無効化している
+  "workers_dev": false,
   "routes": [
     { "pattern": "sample-ramen.hirakuhp.com", "custom_domain": true }
   ]
