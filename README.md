@@ -99,7 +99,9 @@ npm run deploy
 
 デプロイが完了すると、`https://sample-ramen-site.<あなたのサブドメイン>.workers.dev` のようなURLが発行されます。
 
-独自ドメインを割り当てたい場合は、Cloudflareダッシュボードの当該Workerの「Triggers」→「Custom Domains」から設定してください。
+独自ドメインを割り当てたい場合は、Cloudflareダッシュボードの当該Workerの「Triggers」→「Custom Domains」から設定してください(`wrangler.jsonc` の `routes` に `custom_domain: true` で追記する形でも設定できます)。
+
+現在このサイトには `sample-ramen.hirakuhp.com` を独自ドメインとして割り当て済みです。
 
 ## 差し替えが必要な箇所
 
