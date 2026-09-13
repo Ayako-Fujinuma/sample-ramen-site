@@ -101,7 +101,7 @@ npm run deploy
 
 独自ドメインを割り当てたい場合は、Cloudflareダッシュボードの当該Workerの「Triggers」→「Custom Domains」から設定してください(`wrangler.jsonc` の `routes` に `custom_domain: true` で追記する形でも設定できます)。
 
-現在このサイトには `sample-ramen.hirakuhp.com` を独自ドメインとして割り当て済みです。
+現在このサイトは `sample-ramen.hirakuhp.com` を独自ドメインとして割り当て済みで、`*.workers.dev` の旧URLは無効化しています(`wrangler.jsonc` の `workers_dev: false`)。
 
 ## 差し替えが必要な箇所
 
